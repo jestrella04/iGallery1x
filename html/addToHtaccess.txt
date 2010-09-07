@@ -1,0 +1,14 @@
+#Add there lines to your .htaccess file if you are using Tegonuke(tm) ShortLinks
+#iGallery
+RewriteRule ^igallery-showimage-([0-9]*).php modules.php?name=iGallery&op=getImg&pictureid=$1 [L]
+RewriteRule ^igallery-showthumb-([0-9]*).php modules.php?name=iGallery&op=getThumb&pictureid=$1 [L]
+RewriteRule ^igallery-add.html modules.php?name=iGallery&op=addPics [L]
+RewriteRule ^igallery-ratepicture-([0-9]*).html modules.php?name=iGallery&op=ratePic&pictureid=$1 [L]
+RewriteRule ^igallery-comment-post.html modules.php?name=iGallery&op=commentPost [L]
+RewriteRule ^igallery-top.html modules.php?name=iGallery&op=topPics [L]
+RewriteRule ^igallery-recent.html modules.php?name=iGallery&op=recentMoves [L]
+RewriteRule ^igallery-slide-([0-9]*).html modules.php?name=iGallery&op=showSlide&albumid=$1 [L]
+RewriteRule ^igallery-picture-([0-9]*).html modules.php?name=iGallery&op=showPic&pictureid=$1 [L]
+RewriteRule ^igallery-album-([0-9]*)-page([0-9]*).html modules.php?name=iGallery&op=showAlbum&albumid=$1&pag=$2 [L]
+RewriteRule ^igallery-album-([0-9]*).html modules.php?name=iGallery&op=showAlbum&albumid=$1 [L]
+RewriteRule ^igallery.html modules.php?name=iGallery [L]

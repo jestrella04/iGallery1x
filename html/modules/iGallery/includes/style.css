@@ -1,0 +1,369 @@
+/* General module */
+#gal-settings label{
+font-weight:700;
+width:230px;
+float:left;
+margin-right:10px;
+vertical-align:top;
+}
+
+.big-text{
+font-weight:700;
+font-size:140%;
+}
+
+.comment{
+margin-top:10px;
+}
+
+#show-album-wrapper .content-box{
+font-weight:700;
+}
+
+#show-album-wrapper .content-box,#show-picture-wrapper .content-box{
+width:70%;
+margin:15px auto;
+font-size:115%;
+padding:10px 25px;
+}
+
+#album-edit-wrapper{
+width:90%;
+margin:auto;
+border-right:1px solid #B1B1B1;
+border-top:1px solid #B1B1B1;
+border-left:1px solid #B1B1B1;
+}
+
+#album-edit{
+margin-bottom:10px;
+border-bottom:1px solid #B1B1B1;
+padding:10px 25px;
+}
+
+#album-edit #album-edit-info{
+float:left;
+width:75%;
+}
+
+#album-edit #album-edit-info #album-edit-title{
+font-weight:700;
+font-size:120%;
+}
+
+#album-edit #album-edit-actions{
+float:left;
+width:25%;
+text-align:right;
+}
+
+#album-new label, #album-edit label{
+font-weight:700;
+width:150px;
+float:left;
+margin:2px;
+}
+
+#about-gallery{
+width:70%;
+margin:auto;
+}
+
+#settings-alert{
+width:80%;
+margin:20px auto;
+}
+
+#gal-settings,#album-new{
+width:80%;
+margin:auto;
+margin-top:30px;
+}
+
+#gal-settings img{
+width:16px;
+float:left;
+margin-right:10px;
+vertical-align:middle;
+}
+
+#show-pic{
+text-align:center;
+}
+
+#gal-header{
+text-align:center;
+}
+
+#show-details, #show-comments, #comment-button, #post-comment,#show-rating-share{
+width:80%;
+padding:5px;
+margin:0 auto;
+}
+
+#show-rating, #show-share, #show-hits{
+float:left;
+width:33%;
+}
+
+#rating-total-votes, .share-this{
+margin:5px;
+}
+
+#showInfo{
+/*float:left;*/
+/*width:60%;*/
+}
+
+#post-comment{
+display:none;
+}
+
+#top-links{
+width:90%;
+margin:auto;
+font-size:110%;
+}
+
+#comment-editor{
+width:85%;
+margin:0 auto;
+}
+
+.comment-box{
+/*width:80%;*/
+padding:10px 20px;
+margin:0 auto 15px auto;
+}
+
+.show-comment-image{
+width:90px;
+vertical-align:top;
+margin-right:20px;
+text-align:center;
+}
+
+.show-comment-image img{
+max-width:75px;
+}
+
+.show-comment-info{
+text-align:justify;
+/*margin-left:20px;*/
+}
+
+table#show-child,table.show-child{
+width:90%;
+margin:auto;
+}
+
+.sub-album{
+text-align:center;
+vertical-align:top;
+}
+
+img.icon-tyny{
+width:16px;
+}
+
+img.icon-small{
+width:24px;
+}
+
+img.icon-normal{
+width:32px;
+}
+
+img.icon-big{
+width:48px;
+}
+
+img.icon-huge{
+width:64px;
+}
+
+img.icon-small{
+width:16px;
+}
+
+img.sub-album{
+padding:3px;
+border:1px solid gray;
+}
+
+img.thumb-top{
+padding:3px;
+border:1px solid gray;
+max-width:150px;
+}
+
+img.thumb-top-other{
+padding:3px;
+border:1px solid gray;
+max-width:100px;
+}
+
+img.sub-album:hover,img.thumb-top:hover,img.thumb-top-other:hover{
+border:1px solid #fff;
+}
+
+.comment-poster{
+font-weight:bold;
+font-size:130%;
+}
+
+.comment-date{
+margin-left:1em;
+font-size:120%;
+}
+
+.comment-admin{
+margin-left:2em;
+}
+
+.comment-message{
+font-size:110%;
+}
+
+img.comment-avatar{
+max-width:48px;
+padding:5px;
+margin-left:15px;
+float:right;
+}
+
+img.show-pic{
+max-width:95%;
+max-height:640px;
+border:0;
+}
+
+img.star-rating{
+margin:4px 0px 0px 0px;
+border:0px;
+width:16px;
+height:16px;
+}
+
+img.show-new{
+width:32px;
+margin:0.3em;
+}
+
+h2.top-pics{
+text-align:center;
+}
+
+#upload-form-wrapper{
+width:520px;
+margin:0 auto;
+text-align:center;
+}
+
+#upload-form-wrapper .content-box{
+margin:20px auto;
+width:480px;
+max-height:250px;
+text-align:center;
+padding:0;
+overflow:auto;
+padding:10px;
+margin-bottom:10px;
+}
+
+#upload-file-list{
+font-size:120%;
+font-weight:700;
+text-align:left;
+}
+
+#upload-alert{
+margin:10px auto;
+display:none;
+}
+
+#gal-manage-uploads{
+margin:15px auto;
+width:90%;
+}
+
+#th-pic{
+width:55%;
+}
+
+#th-album,#th-date,#th-posted{
+width:15%;
+}
+
+#gal-approve-alert{
+margin-bottom:15px;
+}
+
+#gal-album-delete{
+width:60%;
+margin:0 auto;
+text-align:center;
+}
+
+/* Pagination */
+#pagination{
+margin:15px auto;
+text-align:center;
+}
+
+.pagenavi a, .pagenavi a:link, .pagenavi a:active{
+background-color:#F0F2F4;
+border:1px solid gray;
+font-size:120%;
+margin:1px;
+padding:3px 7px;
+text-decoration:none;
+color:#676767;
+}
+
+.pagenavi a:hover{
+background-color:#DDDDDD;
+color:#000;
+text-decoration:none;
+}
+
+.pagenavi a.current{
+background-color:#F0F2F4;
+color:red;
+text-decoration:none;
+}
+
+/* Confirmation Tooltip */
+.question{
+position:absolute;
+display:inline;
+text-align:center;
+width:174px;
+height:78px;
+font-size:13px;
+line-height:1.5em;
+background:url('../images/bubble.png') left top no-repeat;
+padding:10px 0 0 0;
+color:#000;
+text-shadow:0px 1px 0px #fff;
+margin-left:-7em;
+margin-top:-6em;
+opacity:0;
+}
+
+.yes, .cancel{
+margin-top:.5em;
+margin-right:.5em;
+cursor:pointer;
+display:inline-block;
+width:63px;
+height:21px;
+color:#fff;
+text-shadow:0px 1px 0px #000;
+background:url('../images/button.png') left top no-repeat;
+}
+
+/* Info Tooltip */
+.tooltip_description{
+display:none; /* required */
+}

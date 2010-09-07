@@ -1,0 +1,14 @@
+Quick start...
+
+1. Import igallery.sql to your database (You may need to manually edit database prefix after import is completed)
+2. Drop teh contents of iGallery folder to your modules directory
+3. Activate the module from the admin panel.
+4. Enjoy testing and report all bugs found
+
+Thanks for your interest
+
+
+Best Regads
+Jonathan Estrella
+http://slaytanic.sourceforge.net
+http://twitter.com/jestrella04

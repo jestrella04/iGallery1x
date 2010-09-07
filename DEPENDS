@@ -1,0 +1,6 @@
+/* Core */
+
+ * PHP >= 5.1.x
+ * MySQL >= 4.1
+ * Apache >= 1.3
+ * RavenNuke >= 2.4.x
