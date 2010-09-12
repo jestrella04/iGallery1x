@@ -28,7 +28,7 @@ define('_IG_ADM_CONTENTADDCAT','Album Add');
 define('_IG_ADM_MANAGEWAITING','Media Waiting');
 define('_IG_ADM_ABOUT','About ');
 define('_IG_ADM_QUICKADD','Quick Add');
-define('_IG_ADM_SETTINGS','Settings');
+define('_IG_ADM_SETTINGS','Gallery Settings');
 define('_IG_ADM_SUMMARY','Summary');
 define('_IG_ADM_TOTALALBUMS','Total Albums');
 define('_IG_ADM_TOTALWAITING','Total waiting images');
@@ -100,6 +100,7 @@ define('_IG_ADM_DELETE_COMMENT','Delete this comment');
 define('_IG_ADM_EDIT_COMMENT','Edit this comment');
 define('_IG_ADM_VIEW_COMMENT_THREAD','View comment thread');
 define('_IG_ADM_BROWSE_GALLERY','Browse Gallery');
+define('_IG_ADM_TOOLTIP_THEME','Tooltip theme');
 /* End of admin language defines */
 
 /* Start general user interface defines */
