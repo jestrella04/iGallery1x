@@ -136,13 +136,13 @@ function showNewEmblem($startDate) {
 /* Determine if the POP emblem have to be displayed */
 function showPopEmblem($counter) {
 	global $iConfig, $moduleName, $db, $prefix;
-	if(defined('IN_IGB')) {
+	/*if(defined('IN_IGB')) {
 		$moduleName = IN_IGB;
 		$iConfig = $db->sql_fetchrow($db->sql_query('SELECT pop_count FROM '.$prefix.'_igallery_settings LIMIT 1'));
 		$popCount = $iConfig['pop_count'];
-	} else {
+	} else {*/
 		$popCount = $iConfig['pop_count'];
-	}
+	//}
 
 	if($counter >= $popCount) {
 		return '<img class="show-new" src="modules/'.$moduleName.'/images/popular.png" alt="" title="'._IG_POPULAR.'" />';

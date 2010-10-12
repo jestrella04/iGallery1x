@@ -22,7 +22,7 @@
 defined('BLOCK_FILE') or header('Location: ../index.php');
 
 global $db, $prefix;
-$blockModuleName = 'iGallery';
+$blockModuleName = 'iGallery'; // Update this line if you have renamed the module folder
 
 defined('IN_IGM') or define('IN_IGM', TRUE);
 define('IN_IGB', $blockModuleName);
@@ -30,10 +30,10 @@ get_lang($blockModuleName);
 include_once(NUKE_BASE_DIR.'modules/'.$blockModuleName.'/includes/functions.php');
 include_once(NUKE_BASE_DIR.'modules/'.$blockModuleName.'/includes/settings.php');
 
-$showPic = 1;
-$showDetails = intval($iConfig['show_details']);
-$thumbsPath = $iConfig['thumbs_path'];
-$thumbsFormat = strtolower($iConfig['thumbs_format']);
+$showPic = 2;
+//$showDetails = intval($iConfig['show_details']);
+//$thumbsPath = $iConfig['thumbs_path'];
+//$thumbsFormat = strtolower($iConfig['thumbs_format']);
 $content = '<center>'.PHP_EOL;
 
 $result = $db->sql_query('SELECT *, (SELECT count(comment_pictureid) FROM '.$prefix.'_igallery_comments WHERE comment_pictureid=picture_id) AS m_total FROM '.$prefix.'_igallery_pictures ORDER BY rand() LIMIT 0,'.$showPic.' ;');
@@ -48,7 +48,7 @@ while($picture = $db->sql_fetchrow($result)) {
 	$date = $picture['picture_date'];
 	$content.= '	'.showNewEmblem($date) . showPopEmblem($counter).'<br />'.PHP_EOL;
 	$thumbSrc = 'modules.php?name='.$blockModuleName.'&amp;op=getThumb&amp;pictureid='.$pictureId;
-	$content.= '	<a href="modules.php?name='.$blockModuleName.'&amp;op=showPic&amp;pictureid='.$pictureId.'"><img style="max-width: 90%; border: 0px none;" src="'.$thumbSrc.'" alt="'.$filename.'" /></a>'.PHP_EOL;
+	$content.= '	<a href="modules.php?name='.$blockModuleName.'&amp;op=showPic&amp;pictureid='.$pictureId.'"><img style="max-width: 90%; border: 0px none;" src="'.$thumbSrc.'" title="'.$title.'" alt="" /></a>'.PHP_EOL;
 	//if($showDetails) {
 		$content.= '<br /><a href="modules.php?name='.$blockModuleName.'&amp;op=showPic&amp;pictureid='.$pictureId.'">'.$title.'</a><br />'.PHP_EOL;
 		if ($totalRates!==0 && $totalVotes!==0) {
