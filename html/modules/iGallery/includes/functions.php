@@ -122,11 +122,11 @@ function showNewEmblem($startDate) {
 		$daysOld = floor($offset/60/60/24);
 
 		if ($daysOld<=1) {
-			return '<img class="show-new" src="modules/'.$moduleName.'/images/new_red.png" alt="" title="'._IG_NEWTODAY.'" />';
+			return '<img class="show-new" src="modules/'.$moduleName.'/images/new_red.png" alt="" title="'._IG_NEWTODAY.'" />'.PHP_EOl;
 		} elseif($daysOld<=3 && $daysOld>1) {
-			return '<img class="show-new" src="modules/'.$moduleName.'/images/new_green.png" alt="" title="'._IG_NEWRECENT.'" />';
+			return '<img class="show-new" src="modules/'.$moduleName.'/images/new_green.png" alt="" title="'._IG_NEWRECENT.'" />'.PHP_EOL;
 		} elseif($daysOld<=7 && $daysOld>3) {
-			return '<img class="show-new" src="modules/'.$moduleName.'/images/new_yellow.png" alt="" title="'._IG_NEWTHISWEEK.'" />';
+			return '<img class="show-new" src="modules/'.$moduleName.'/images/new_yellow.png" alt="" title="'._IG_NEWTHISWEEK.'" />'.PHP_EOL;
 		}
 	} else {
 		return false;
@@ -134,18 +134,12 @@ function showNewEmblem($startDate) {
 }
 
 /* Determine if the POP emblem have to be displayed */
-function showPopEmblem($counter) {
-	global $iConfig, $moduleName, $db, $prefix;
-	/*if(defined('IN_IGB')) {
-		$moduleName = IN_IGB;
-		$iConfig = $db->sql_fetchrow($db->sql_query('SELECT pop_count FROM '.$prefix.'_igallery_settings LIMIT 1'));
-		$popCount = $iConfig['pop_count'];
-	} else {*/
-		$popCount = $iConfig['pop_count'];
-	//}
-
+function showPopEmblem($counter, $popCount) {
+	global $moduleName, $db, $prefix;
+	if(defined('IN_IGB')) $moduleName = IN_IGB;
+	$popCount = intval($popCount);
 	if($counter >= $popCount) {
-		return '<img class="show-new" src="modules/'.$moduleName.'/images/popular.png" alt="" title="'._IG_POPULAR.'" />';
+		return '<img class="show-new" src="modules/'.$moduleName.'/images/popular.png" alt="" title="'._IG_POPULAR.'" /><br />'.PHP_EOL;
 	}
 }
 
@@ -864,6 +858,7 @@ function showTopPics($what,$type='') {
 	$showDetails = intval($iConfig['show_details']);
 	$thumbsPath = $iConfig['thumbs_path'];
 	$thumbsFormat = strtolower($iConfig['thumbs_format']);
+	$popCount = intval($iConfig['pop_count']);
 	if($type=='Recent') {
 		$orderByPop = 'picture_date';
 		$orderByRated = 'picture_lastrate';
@@ -916,7 +911,7 @@ function showTopPics($what,$type='') {
 		echo '			<a href="modules.php?name='.$moduleName.'&amp;op=showPic&amp;pictureid='.$pictureId.'">'.$cover.'</a>'.PHP_EOL;
 		echo '		<div class="tooltip_description">'.PHP_EOL;
 		echo '			<p><span class="title">'.$title.'</span>';
-		echo showNewEmblem($date) . showPopEmblem($counter);
+		echo showNewEmblem($date) . showPopEmblem($counter, $popCount);
 		echo '<br />'.PHP_EOL;
 		if($description) echo '			<span>'.$description.'</span>';
 		echo '			</p>';
@@ -946,6 +941,7 @@ function showSubPics($albumId) {
 	$showColumns = intval($iConfig['show_columns']);
 	$thumbsPath = $iConfig['thumbs_path'];
 	$thumbsFormat = strtolower($iConfig['thumbs_format']);
+	$popCount = intval($iConfig['pop_count']);
 	$albumInfo = $db->sql_fetchrow($db->sql_query('SELECT album_folder, album_desc FROM '.$prefix.'_igallery_albums WHERE album_id='.$albumId.''));
 	$folderName = $albumInfo['album_folder'];
 	$column=1;
@@ -972,7 +968,7 @@ function showSubPics($albumId) {
 		echo '		<a href="modules.php?name='.$moduleName.'&amp;op=showPic&amp;pictureid='.$pictureId.'"><img class="sub-album" src="'.$thumbSrc.'" alt="'.$title.'" /></a>'.PHP_EOL;
 		echo '		<div class="tooltip_description">'.PHP_EOL;
 		echo '			<p><span class="title">'.$title.'</span>';
-		echo showNewEmblem($date) . showPopEmblem($counter);
+		echo showNewEmblem($date) . showPopEmblem($counter, $popCount);
 		echo '<br />'.PHP_EOL;
 		if($description) echo '			<span>'.$description.'</span>';
 		echo '			</p>';

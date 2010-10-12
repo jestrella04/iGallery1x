@@ -20,8 +20,7 @@
  */
 
 defined('IN_IGM') OR die();
-global $db, $prefix;
-if (defined('IN_IGB')) $moduleName = $blockModuleName;
+global $db, $prefix, $moduleName;
 $ver = '0.9.9 (aka 1.0 RC)';
 $result = $db->sql_query('SELECT setting_name, setting_value FROM '.$prefix.'_igallery_settings');
 while (list($setting_name, $setting_value) = $db->sql_fetchrow($result)) {

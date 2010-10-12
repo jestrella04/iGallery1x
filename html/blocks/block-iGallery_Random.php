@@ -22,18 +22,17 @@
 defined('BLOCK_FILE') or header('Location: ../index.php');
 
 global $db, $prefix;
+$showPic = 2; // Number of pics to display in the block
 $blockModuleName = 'iGallery'; // Update this line if you have renamed the module folder
+
+// You should not edit anything after this line
 
 defined('IN_IGM') or define('IN_IGM', TRUE);
 define('IN_IGB', $blockModuleName);
 get_lang($blockModuleName);
-include_once(NUKE_BASE_DIR.'modules/'.$blockModuleName.'/includes/functions.php');
 include_once(NUKE_BASE_DIR.'modules/'.$blockModuleName.'/includes/settings.php');
+include_once(NUKE_BASE_DIR.'modules/'.$blockModuleName.'/includes/functions.php');
 
-$showPic = 2;
-//$showDetails = intval($iConfig['show_details']);
-//$thumbsPath = $iConfig['thumbs_path'];
-//$thumbsFormat = strtolower($iConfig['thumbs_format']);
 $content = '<center>'.PHP_EOL;
 
 $result = $db->sql_query('SELECT *, (SELECT count(comment_pictureid) FROM '.$prefix.'_igallery_comments WHERE comment_pictureid=picture_id) AS m_total FROM '.$prefix.'_igallery_pictures ORDER BY rand() LIMIT 0,'.$showPic.' ;');
@@ -46,7 +45,8 @@ while($picture = $db->sql_fetchrow($result)) {
 	$totalVotes = intval($picture['picture_votes']);
 	$totalComments = intval($picture['m_total']);
 	$date = $picture['picture_date'];
-	$content.= '	'.showNewEmblem($date) . showPopEmblem($counter).'<br />'.PHP_EOL;
+	$popCount = $iConfig['pop_count'];
+	$content.= '	'.showNewEmblem($date) . showPopEmblem($counter, $popCount) . PHP_EOL;
 	$thumbSrc = 'modules.php?name='.$blockModuleName.'&amp;op=getThumb&amp;pictureid='.$pictureId;
 	$content.= '	<a href="modules.php?name='.$blockModuleName.'&amp;op=showPic&amp;pictureid='.$pictureId.'"><img style="max-width: 90%; border: 0px none;" src="'.$thumbSrc.'" title="'.$title.'" alt="" /></a>'.PHP_EOL;
 	//if($showDetails) {

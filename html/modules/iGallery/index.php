@@ -159,6 +159,7 @@ function showAlbum() {
 function showPic() {
 	global $db, $prefix, $iConfig, $moduleName, $user;
 	$picturesPath = $iConfig['pictures_path'];
+	$popCount = intval($iConfig['pop_count']);
 	//$inlineJS = '';
 	AddJSToHead('includes/jquery/jquery.js','file');
 	AddJSToHead('modules/'.$moduleName.'/includes/jquery/jquery.MetaData.js','file');
@@ -183,7 +184,7 @@ function showPic() {
 	showTopLinks($albumId, $pictureId); echo '<br /><br />'.PHP_EOL;
 	picTopMenu($pictureId, $albumId);
 	echo '<div id="show-pic">'.PHP_EOL;
-	echo '	'.showNewEmblem($dateAdded) . showPopEmblem($counter).'<br />'.PHP_EOL;
+	echo '	'.showNewEmblem($dateAdded) . showPopEmblem($counter, $popCount).'<br />'.PHP_EOL;
 	echo '	<img class="show-pic" src="modules.php?name='.$moduleName.'&amp;op=getImg&amp;pictureid='.$pictureId.'" alt="'.$filename.'" title="'.$pictureTitle.'" />'.PHP_EOL;
 	echo '</div>'.PHP_EOL;
 	echo '<div class="content-box"><b>'.$pictureTitle.'</b>: '.$description.'</div>'.PHP_EOL;
