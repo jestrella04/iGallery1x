@@ -101,9 +101,9 @@ define('_IG_ADM_EDIT_COMMENT','Edit this comment');
 define('_IG_ADM_VIEW_COMMENT_THREAD','View comment thread');
 define('_IG_ADM_BROWSE_GALLERY','Browse Gallery');
 define('_IG_ADM_TOOLTIP_THEME','Tooltip theme');
-define('_IG_ADM_DELETE_ALL_CHILD_AND_PICS','Delete album and all its contents.');
-define('_IG_ADM_DELETE_MOVE_CHILD_AND_PICS','Delete album and move all contents.');
-define('_IG_CHILDS_WILL_BE_MOVED_TO','Tooltip theme');
+define('_IG_ADM_DELETE_ALL_CHILD_AND_PICS','Delete album and all its contents');
+define('_IG_ADM_DELETE_MOVE_CHILD_AND_PICS','Delete album and move all contents');
+define('_IG_CHILDS_WILL_BE_MOVED_TO','Contents will be moved to');
 define('_IG_ONLY_IF','If and only if option');
 define('_IG_ADM_IS_SELECTED_ABOVE','is selected above');
 /* End of admin language defines */
