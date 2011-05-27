@@ -101,6 +101,11 @@ define('_IG_ADM_EDIT_COMMENT','Edit this comment');
 define('_IG_ADM_VIEW_COMMENT_THREAD','View comment thread');
 define('_IG_ADM_BROWSE_GALLERY','Browse Gallery');
 define('_IG_ADM_TOOLTIP_THEME','Tooltip theme');
+define('_IG_ADM_DELETE_ALL_CHILD_AND_PICS','Delete album and all its contents.');
+define('_IG_ADM_DELETE_MOVE_CHILD_AND_PICS','Delete album and move all contents.');
+define('_IG_CHILDS_WILL_BE_MOVED_TO','Tooltip theme');
+define('_IG_ONLY_IF','If and only if option');
+define('_IG_ADM_IS_SELECTED_ABOVE','is selected above');
 /* End of admin language defines */
 
 /* Start general user interface defines */
@@ -160,7 +165,7 @@ define('_IG_EXPLORE','EXPLORE');
 define('_IG_SELECTIMGS','Select images you want to upload from your computer');
 define('_IG_UPLOADIMGS','Upload Files');
 define('_IG_CANCELALL','Cancel All');
-define('_IG_SELECTIMGSTIP','You can select multiple images pressing CTRL key or dragguing pointer.');
+define('_IG_SELECTIMGSTIP','You can select multiple images by pressing CTRL key or by dragguing your mouse pointer.');
 define('_IG_TIP','Tip');
 define('_IG_GALLSLIDE','View Slideshow');
 define('_IG_GALLADMIN','Manage iGallery');
