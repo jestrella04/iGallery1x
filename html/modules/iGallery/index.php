@@ -1,7 +1,7 @@
 <?
-/*	iGallery for RavenNuke(tm): /index.php
- *	Copyright 2009 - 2010 Jonathan Estrella <jestrella04@gmail.com>
- * 	Join me at http://slaytanic.sourceforge.net
+/*	iGallery for RavenCMS(tm): /index.php
+ *	Copyright 2009 - 2013 Jonathan Estrella <jonathan@exuberaza.net>
+ * 	Join me at www.exuberanza.net
  *
  *	This program is free software; you can redistribute it and/or modify
  *	it under the terms of the GNU General Public License as published by
