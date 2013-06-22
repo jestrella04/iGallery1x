@@ -1,4 +1,4 @@
-<?
+<?php
 /*	iGallery for RavenCMS(tm): /index.php
  *	Copyright 2009 - 2013 Jonathan Estrella <jonathan@exuberaza.net>
  * 	Join me at www.exuberanza.net
