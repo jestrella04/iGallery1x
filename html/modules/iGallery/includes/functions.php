@@ -768,7 +768,8 @@ function showSubAlbum($root=1) {
 	$thumbsFormat = strtolower($iConfig['thumbs_format']);
 	$albumCounter = 0;
 
-	echo '<table class="show-child" cellspacing="5" cellpadding="5"><tr>' . PHP_EOL;
+	//echo '<table class="show-child" cellspacing="5" cellpadding="5"><tr>' . PHP_EOL;
+    echo '<ul class="thumbnails">' . PHP_EOL;
 
 	$column=1; $srow=1;
 	$node = getNodes($root);
@@ -826,28 +827,33 @@ function showSubAlbum($root=1) {
 			$coverSrc = 'modules.php?name='. $moduleName .'&amp;op=getThumb&amp;pictureid='.$pictureId;
 		}
 
-		echo '<td class="sub-album">' . PHP_EOL;
-		echo '<div class="thumb-target">' . PHP_EOL;
+		//echo '<td class="sub-album">' . PHP_EOL;
+		//echo '<div class="thumb-target">' . PHP_EOL;
+        echo '<li class="span3">' .PHP_EOL;
+        echo '<div class="thumbnail">' .PHP_EOL;
 		echo '	<a href="modules.php?name='. $moduleName .'&amp;op=showAlbum&amp;albumid='.$catId .'"><img class="sub-album" src="'.$coverSrc .'" alt="'.$title .'" /></a>' . PHP_EOL;
-		echo '	<div class="tooltip_description">' . PHP_EOL;
-		echo '		<p>' . PHP_EOL;
-		echo '			<span class="title">'.$title .'</span>';
-		echo showNewEmblem($latestDate);
-		echo '<br />' . PHP_EOL;
-		if ($description) echo '			<span>'.$description .'</span></p>' . PHP_EOL;
-		echo '		<p>'.$totalPics .' '. _IG_TOTALPICS .'</p>' . PHP_EOL;
+		//echo '	<div class="tooltip_description">' . PHP_EOL;
+		//echo '		<p>' . PHP_EOL;
+		//echo '			<span class="title">'.$title .'</span>';
+        echo '		<div class="caption">' . PHP_EOL;
+        echo '			<h4>'. $title .'</h4>';
+		//echo showNewEmblem($latestDate);
+		//echo '<br />' . PHP_EOL;
+		if ($description) echo '			<p>'.$description .'</p>' . PHP_EOL;
+		echo '		<span class="label label-info">'.$totalPics .' '. _IG_TOTALPICS .'</span>' . PHP_EOL;
 		echo '	</div>';
 		echo '</div>';
-		echo '</td>' . PHP_EOL;
-		if (($column%$showColumns)==0) {
+		echo '</li>' . PHP_EOL;
+		/*if (($column%$showColumns)==0) {
 			//echo '<div style="clear:left;"></div>' . PHP_EOL;
 			echo '</tr><tr>' . PHP_EOL;
 			$srow++;
-		}
+		}*/
 		$column++;
 	}
 	//echo '<div style="clear:left;"></div></div>';
-	echo '<td></td></tr></table>' . PHP_EOL;
+	//echo '<td></td></tr></table>' . PHP_EOL;
+    echo '</ul>' . PHP_EOL;
 	//$totalItems = $db->sql_numrows($db->sql_query('SELECT album_id FROM '.$prefix .'_igallery_albums WHERE album_parent=0 AND album_active=1 ;'));
 	//paginationSystem($ofsbgn, $ofsppg, $totalItems);
 	//if ($srow!==1 || $column!==1) echo '<hr />';
